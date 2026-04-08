@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, RouterModule, TodoListComponent, FormsModule],
   templateUrl: './todo.html',
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent implements OnInit {                             //Coment front
 
   tareas = signal<Tarea[]>([]);
   esVistaCompletadas = false;               //coment main
