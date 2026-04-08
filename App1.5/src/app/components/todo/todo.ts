@@ -40,7 +40,7 @@ export class TodoComponent implements OnInit {
       if (msg) {
         this.mensaje = msg;
         this.tipoMensaje = 'success';
-        setTimeout(() => this.mensaje = '', 5000);      //ARREGLAR TIEMPO  ¿COMO?
+        setTimeout(() => this.mensaje = '', 5000);      //ARREGLAR TIEMPO
         sessionStorage.removeItem('mensaje');
       }
     }
