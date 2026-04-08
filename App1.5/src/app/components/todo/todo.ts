@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 export class TodoComponent implements OnInit {
 
   tareas = signal<Tarea[]>([]);
-  esVistaCompletadas = false;
+  esVistaCompletadas = false;               //coment main
   nomb = "*****";
 
   mensaje = '';
