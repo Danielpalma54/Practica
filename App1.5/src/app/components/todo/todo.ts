@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 export class TodoComponent implements OnInit {                             //Coment front     //MAIN EJEMPLO
 
   tareas = signal<Tarea[]>([]);
-  esVistaCompletadas = false;               //coment main
+  esVistaCompletadas = false;               //coment main          //Frontend
   nomb = "*****";
 
   mensaje = '';
