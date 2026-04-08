@@ -9,11 +9,11 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-todo',
-  standalone: true,
+  standalone: true, 
   imports: [CommonModule, RouterModule, TodoListComponent, FormsModule],
   templateUrl: './todo.html',
 })
-export class TodoComponent implements OnInit {                             //Coment front
+export class TodoComponent implements OnInit {                             //Coment front     //MAIN EJEMPLO
 
   tareas = signal<Tarea[]>([]);
   esVistaCompletadas = false;               //coment main
