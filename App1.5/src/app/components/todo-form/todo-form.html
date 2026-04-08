@@ -1,0 +1,27 @@
+<h2>{{ editando ? 'Editar Tarea' : 'Nueva Tarea' }}</h2>
+
+<form [formGroup]="formTarea" (ngSubmit)="guardar()">
+
+  <input formControlName="nombre" placeholder="Nombre">
+
+  <div *ngIf="formTarea.get('nombre')?.touched && formTarea.get('nombre')?.invalid" class="error-text">
+    <div *ngIf="formTarea.get('nombre')?.hasError('required')">Ingrese el nombre</div>
+    <div *ngIf="formTarea.get('nombre')?.hasError('minlength')">Minimo 3 caracteres</div>
+    <div *ngIf="formTarea.get('nombre')?.hasError('pattern')">Solo letras</div>
+  </div>
+
+  <input formControlName="descripcion" placeholder="Descripción">
+
+  <div *ngIf="formTarea.get('descripcion')?.touched && formTarea.get('descripcion')?.invalid" class="error-text">
+    Minimo 5 caracteres
+  </div>
+
+  <input type="file" (change)="onFileSelected($event)" accept="image/*">
+
+  <img *ngIf="imagenBase64" [src]="imagenBase64" width="100">
+
+  <button type="submit">
+    {{ editando ? 'Actualizar' : 'Agregar Nueva Tarea' }}
+  </button>
+
+</form>

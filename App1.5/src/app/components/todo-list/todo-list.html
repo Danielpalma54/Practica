@@ -1,0 +1,29 @@
+<ul>
+  <li *ngFor="let tarea of tareas">
+
+    <div class="contenido-tarea" [class.completada]="tarea.completada">
+
+      <span class="titulo-tarea">
+        {{ tarea.nombre }}
+      </span>
+
+      <span class="descripcion-tarea">
+        {{ tarea.descripcion }}
+      </span>
+
+      <span class="fecha-tarea">
+        {{ tarea.fecha }}
+      </span>
+
+      <img *ngIf="tarea.imagen" [src]="tarea.imagen" class="img-tarea">
+
+    </div>
+
+    <div class="acciones" *ngIf="!soloVista">
+      <button (click)="toggle.emit(tarea)">✔</button>
+      <button (click)="editar.emit(tarea)">✏</button>
+      <button (click)="eliminar.emit(tarea.id!)">❌</button>
+    </div>
+
+  </li>
+</ul>

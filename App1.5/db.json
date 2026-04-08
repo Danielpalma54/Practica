@@ -1,0 +1,106 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "nombre": "onee",
+      "descripcion": "Desarrollo Arc",
+      "fecha": "2026-03-30",
+      "completada": false
+    },
+    {
+      "id": 2,
+      "nombre": "two",
+      "descripcion": "Desarrollo Silksong",
+      "fecha": "2026-03-30",
+      "completada": false
+    },
+    {
+      "id": 3,
+      "nombre": "three",
+      "descripcion": "Desarrollo Pugb",
+      "fecha": "2026-03-27",
+      "completada": false
+    },
+    {
+      "id": 4,
+      "nombre": "four",
+      "descripcion": "Desarrollo Peak",
+      "fecha": "2026-03-30",
+      "completada": false,
+      "imagen": ""
+    },
+    {
+      "nombre": "five",
+      "descripcion": "Desarrollo bathrooms",
+      "fecha": "2026-03-26",
+      "completada": false,
+      "id": 5
+    },
+    {
+      "nombre": "six",
+      "descripcion": "Desarrollo Gta VI",
+      "fecha": "2026-03-26",
+      "completada": false,
+      "id": 6
+    },
+    {
+      "nombre": "seven",
+      "descripcion": "Desarrollo Portal 3",
+      "fecha": "2026-03-26",
+      "completada": true,
+      "id": 7
+    },
+    {
+      "nombre": "eight",
+      "descripcion": "Desarrollo API",
+      "fecha": "2026-03-26",
+      "completada": false,
+      "id": 8
+    },
+    {
+      "nombre": "nine",
+      "descripcion": "Desarrollo Celeste",
+      "fecha": "2026-03-26",
+      "completada": true,
+      "id": 9
+    },
+    {
+      "nombre": "ten",
+      "descripcion": "Desarrollo LOl",
+      "fecha": "2026-03-26",
+      "completada": false,
+      "id": 10
+    },
+    {
+      "nombre": "doue",
+      "descripcion": "cacccracajh",
+      "fecha": "2026-03-30",
+      "completada": false,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "nombre": "kava",
+      "descripcion": "helia",
+      "fecha": "2026-03-30",
+      "completada": false,
+      "imagen": ""
+    },
+    {
+      "nombre": "aadada",
+      "descripcion": "adadadadad",
+      "fecha": "2026-04-01",
+      "completada": true,
+      "imagen": "data:image/png;base64,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",
+      "id": 13
+    },
+    {
+      "nombre": "daadadad",
+      "descripcion": "adadadadadad",
+      "fecha": "2026-04-01",
+      "completada": false,
+      "imagen": "",
+      "id": 14
+    }
+  ]
+}

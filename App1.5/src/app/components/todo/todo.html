@@ -1,0 +1,40 @@
+<div *ngIf="mensaje" class="mensaje" [ngClass]="tipoMensaje">
+  <span>{{ mensaje }}</span>
+  <button (click)="mensaje=''">✖</button>
+</div>
+
+<img src="todo.png" class="logo-app" alt="Logo">
+
+<div class="buscador">
+  <input 
+    type="text" 
+    placeholder="🔍 Buscar tarea..."
+    [(ngModel)]="textoBusqueda"
+  >
+</div>
+
+<h1>Lista de Tareas</h1>
+<h3>Bienvenido {{nomb}}</h3>
+
+<div class="nav" *ngIf="!esVistaCompletadas">
+  <button routerLink="/nueva">Agregar Tarea</button>
+  <button routerLink="/completadas">Completadas</button>
+</div>
+
+<div *ngIf="esVistaCompletadas">
+  <button (click)="volver()">⬅ Volver</button>
+</div>
+
+<hr>
+
+<app-todo-list
+  [tareas]="tareasFiltradas"
+  [soloVista]="esVistaCompletadas"
+  (eliminar)="eliminarTarea($event)"
+  (toggle)="marcarComoHecho($event)"
+  (editar)="editarTarea($event)">
+</app-todo-list>
+
+<p *ngIf="tareasFiltradas.length === 0 && !mensaje">
+  No hay tareas
+</p>
