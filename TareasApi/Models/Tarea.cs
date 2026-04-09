@@ -8,6 +8,6 @@
         public string Fecha { get; set; } = "";
         public bool Completada { get; set; }
         public string? Imagen { get; set; }
-        public bool Activa { get; set; } = true; //respaldo en caso de borrado solo se vuelve inactiva //IMPORTANTE HACER MIGRACIONES Y UPDATE  TAMBIEN VERIFICAR EN DBEAVER
+        public bool Activa { get; set; } = true; //RESPALDO EN BD EN CASO DE BORRAR DESDE LA PAGINA //IMPORTANTE HACER MIGRACIONES Y UPDATE  TAMBIEN VERIFICAR EN DBEAVER
     }
 }
