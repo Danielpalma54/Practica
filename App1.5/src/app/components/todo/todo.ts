@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-todo',
   standalone: true, 
-  imports: [CommonModule, RouterModule, TodoListComponent, FormsModule],              //IMPORTANTE
+  imports: [CommonModule, RouterModule, TodoListComponent, FormsModule],              
   templateUrl: './todo.html',
 })
 export class TodoComponent implements OnInit {                             
