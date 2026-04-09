@@ -20,7 +20,7 @@ export class TodoComponent implements OnInit {
   nomb = "*****";
 
   mensaje = '';
-  tipoMensaje: 'success' | 'error' | 'info' = 'info';
+  tipoMensaje: 'success' | 'error' | 'info' = 'info';                        //Prueba Reset
 
   textoBusqueda: string = '';
 
