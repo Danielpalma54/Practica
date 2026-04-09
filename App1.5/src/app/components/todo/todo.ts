@@ -17,7 +17,7 @@ export class TodoComponent implements OnInit {
 
   tareas = signal<Tarea[]>([]);
   esVistaCompletadas = false;               
-  nomb = "*****";
+  nomb = "*****";                                                       //Prueba Revert
 
   mensaje = '';
   tipoMensaje: 'success' | 'error' | 'info' = 'info';                        //Prueba Reset
