@@ -7,7 +7,7 @@ import { Tarea } from '../models/tarea.model';
 })
 export class TareasService {
 
-  private API = 'http://localhost:5172/api/tareas';
+  private API = 'http://localhost:5000/api/tareas';
 
   constructor(private http: HttpClient) {}
 

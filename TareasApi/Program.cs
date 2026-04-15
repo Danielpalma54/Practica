@@ -25,4 +25,14 @@ app.UseCors("Angular");
 
 app.MapControllers();
 
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<TareasApi.Data.AppDbContext>(); 
+    context.Database.EnsureCreated();
+}
+
+app.Run();
+
 app.Run();

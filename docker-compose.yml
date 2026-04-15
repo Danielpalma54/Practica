@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres       
+      POSTGRES_PASSWORD: 1234    
+      POSTGRES_DB: tareas             
+    ports:
+      - "5432:5432" 
+    volumes:
+      - pgdata:/var/lib/postgresql/data  
+    restart: always
+
+
+  backend:
+    build:
+      context: ./TareasApi
+      dockerfile: Dockerfile
+    container_name: backend_api
+    ports:
+      - "5000:8080" 
+    depends_on:
+      - db 
+    environment:
+      
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=tareas;Username=postgres;Password=1234;
+
+  frontend:
+    build:
+      context: ./App1.5
+      dockerfile: Dockerfile
+    container_name: frontend_angular
+    ports:
+      - "4200:80" 
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
